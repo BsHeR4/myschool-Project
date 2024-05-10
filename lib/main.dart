@@ -14,9 +14,10 @@ class MySchool extends StatelessWidget {
     return MaterialApp(
       routes: {
         LoginPage.id: (context) => LoginPage(),
-        HomePageWithoutAnnouncment.id:(context) => HomePageWithoutAnnouncment(),
+        HomePageWithoutAnnouncment.id: (context) =>
+            HomePageWithoutAnnouncment(),
       },
-      initialRoute: HomePageWithoutAnnouncment.id,
+      initialRoute: LoginPage.id,
     );
   }
 }
