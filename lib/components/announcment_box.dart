@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AnnouncmentBox extends StatelessWidget {
-  AnnouncmentBox({super.key, required this.token});
-  String token;
+  AnnouncmentBox({super.key});
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -36,7 +35,7 @@ class AnnouncmentBox extends StatelessWidget {
                     SizedBox(
                       height: 15,
                     ),
-                    Text(token),
+                    Text("jdsjflksdjfkjdslkfjlsdf"),
                     SizedBox(
                       height: 15,
                     ),

@@ -6,7 +6,9 @@ import 'package:myschool/components/custom_button.dart';
 import 'package:myschool/components/custom_text_field.dart';
 import 'package:myschool/models/login_model.dart';
 import 'package:myschool/pages/home_page_without_announcment.dart';
+import 'package:myschool/providers/login_provider.dart';
 import 'package:myschool/services/login_service.dart';
+import 'package:provider/provider.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({super.key});
@@ -17,7 +19,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  LoginModel? loginModel;
   ScrollController _scrollController = ScrollController();
   bool maxScrolling = false;
 
@@ -47,6 +48,8 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    LoginModel? loginData =
+        Provider.of<LoginProvider>(context, listen: false).loginData;
     return Scaffold(
       body: CustomScrollView(
         controller: _scrollController,
@@ -105,6 +108,8 @@ class _LoginPageState extends State<LoginPage> {
                   expandedHeight: 300.0,
                   centerTitle: true,
                   title: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(10),
@@ -201,16 +206,13 @@ class _LoginPageState extends State<LoginPage> {
                       cutsomButton(
                         text: 'Sign in',
                         onTap: () async {
-                          loginModel = await LoginService().Login(
+                          loginData = await LoginService().Login(
                             userName: userName!,
                             password: password!,
                           );
-                          if (loginModel != null) {
+                          if (loginData != null) {
                             Navigator.pushNamed(
-                              context,
-                              HomePageWithoutAnnouncment.id,
-                              arguments: loginModel,
-                            );
+                                context, HomePageWithoutAnnouncment.id);
                           } else {
                             print('Null');
                           }
