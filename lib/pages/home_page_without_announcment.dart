@@ -1,6 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:myschool/components/announcment_box.dart';
-import 'package:myschool/components/bottom_navigation_bar.dart';
+import 'package:flutter/widgets.dart';
+import 'package:myschool/widgets/bottom_navigation_bar.dart';
 import 'package:myschool/models/login_model.dart';
 import 'package:myschool/providers/login_provider.dart';
 import 'package:provider/provider.dart';
@@ -11,7 +12,9 @@ class HomePageWithoutAnnouncment extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    LoginModel? loginData = Provider.of<LoginProvider>(context).loginData;
+    LoginModel? loginData =
+        Provider.of<LoginProvider>(context, listen: false).loginData;
+    // print('this is from home page ${loginData!.token}');
     return Scaffold(
       body: CustomScrollView(
         slivers: [
@@ -20,8 +23,8 @@ class HomePageWithoutAnnouncment extends StatelessWidget {
             elevation: 0,
             floating: false,
             pinned: true,
-            expandedHeight: 400.0,
-            title: IconButton(
+            expandedHeight: 380.0,
+            leading: IconButton(
                 onPressed: () {},
                 icon: Icon(
                   Icons.menu_outlined,
@@ -60,11 +63,17 @@ class HomePageWithoutAnnouncment extends StatelessWidget {
                         children: [
                           Text(
                             'Student Name : ',
-                            style: TextStyle(fontSize: 20, color: Colors.cyan),
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Color(0xffc1e8ff),
+                            ),
                           ),
                           Text(
-                            loginData!.token,
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            'Bsher Al-Mahayni',
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.white,
+                            ),
                           ),
                         ],
                       ),
@@ -75,11 +84,17 @@ class HomePageWithoutAnnouncment extends StatelessWidget {
                         children: [
                           Text(
                             'Class : ',
-                            style: TextStyle(fontSize: 20, color: Colors.cyan),
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Color(0xffc1e8ff),
+                            ),
                           ),
                           Text(
                             ' Secondary Third',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.white,
+                            ),
                           ),
                         ],
                       ),
@@ -90,11 +105,17 @@ class HomePageWithoutAnnouncment extends StatelessWidget {
                         children: [
                           Text(
                             'Division : ',
-                            style: TextStyle(fontSize: 20, color: Colors.cyan),
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Color(0xffc1e8ff),
+                            ),
                           ),
                           Text(
                             ' First',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.white,
+                            ),
                           ),
                         ],
                       ),
@@ -108,9 +129,9 @@ class HomePageWithoutAnnouncment extends StatelessWidget {
             delegate: SliverChildListDelegate([
               Center(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 25),
+                  padding: const EdgeInsets.symmetric(vertical: 20),
                   child: Text(
-                    ' Announcment',
+                    ' Announcments',
                     style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
@@ -118,12 +139,20 @@ class HomePageWithoutAnnouncment extends StatelessWidget {
                   ),
                 ),
               ),
-              Image.asset('assets/images/no-announcment.png'),
+              Image.asset(
+                'assets/images/no-announcment.png',
+                height: 280,
+              ),
+              Center(
+                child: Text(
+                  'There is no announcment now',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                ),
+              ),
             ]),
           ),
         ],
       ),
-      bottomNavigationBar: CustomBottomNavigationBar(),
     );
   }
 }
