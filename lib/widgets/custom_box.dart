@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AnnouncmentBox extends StatelessWidget {
-  AnnouncmentBox({super.key});
+class CustomBox extends StatelessWidget {
+  CustomBox({super.key});
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -35,7 +35,8 @@ class AnnouncmentBox extends StatelessWidget {
                     SizedBox(
                       height: 15,
                     ),
-                    Text("jdsjflksdjfkjdslkfjlsdf"),
+                    Text(
+                        'His grades are very low, please take care of him and provide good care and monitoring .'),
                     SizedBox(
                       height: 15,
                     ),

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:myschool/constants.dart';
 import 'package:myschool/models/login_model.dart';
 import 'package:myschool/pages/main_page.dart';
 import 'package:myschool/widgets/custom_button.dart';
@@ -131,6 +132,8 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       cutsomButton(
                         text: 'Sign in',
+                        buttonColor: kPrimaryColor,
+                        textColor: Colors.white,
                         onTap: () async {
                           Provider.of<LoginProvider>(context, listen: false)
                               .loginData = await LoginService().Login(

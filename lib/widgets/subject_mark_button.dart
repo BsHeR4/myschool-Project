@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:myschool/pages/show_mark_page.dart';
 
 class SubjectMarkButton extends StatelessWidget {
-  const SubjectMarkButton({super.key});
-
+  SubjectMarkButton({super.key, required this.heroTag});
+  String heroTag;
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
+      heroTag: heroTag,
       splashColor: Colors.grey[300],
       elevation: 3,
       backgroundColor: Color(0xffE6E6E6),
-      onPressed: () {},
-      child: Text('mathemattics'),
+      onPressed: () {
+        Navigator.pushNamed(context, ShowMarkPage.id);
+      },
+      child: Text(
+        'mathemattic',
+        style: TextStyle(color: Colors.black),
+      ),
     );
     // Center(
     //   child: Padding(

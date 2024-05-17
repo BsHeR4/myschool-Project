@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:myschool/widgets/announcment_box.dart';
+import 'package:myschool/widgets/custom_box.dart';
+import 'package:myschool/widgets/subject_mark_box.dart';
 import 'package:myschool/widgets/subject_mark_button.dart';
 
 class MarkPage extends StatelessWidget {
@@ -33,20 +34,29 @@ class MarkPage extends StatelessWidget {
               )),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(30),
-        child: GridView.builder(
-            clipBehavior: Clip.none,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 1.1,
-                crossAxisSpacing: 50,
-                mainAxisSpacing: 55),
-            itemCount: 16,
-            itemBuilder: (context, index) {
-              return SubjectMarkButton();
-            }),
-      ),
+      body: ListView.builder(
+          itemCount: 16,
+          itemBuilder: (context, index) {
+            return SubjectMarkBox();
+          }),
     );
   }
 }
+
+
+
+
+//  Padding(
+//         padding: const EdgeInsets.all(20),
+//         child: GridView.builder(
+//             clipBehavior: Clip.none,
+//             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+//                 crossAxisCount: 2,
+//                 childAspectRatio: 1.1,
+//                 crossAxisSpacing: 50,
+//                 mainAxisSpacing: 55),
+//             itemCount: 16,
+//             itemBuilder: (context, index) {
+//               return SubjectMarkBox();
+//             }),
+//       ),

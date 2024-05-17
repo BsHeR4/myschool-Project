@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:myschool/constants.dart';
 import 'package:myschool/widgets/bottom_navigation_bar.dart';
 import 'package:myschool/models/login_model.dart';
 import 'package:myschool/providers/login_provider.dart';
@@ -19,11 +20,11 @@ class HomePageWithoutAnnouncment extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            backgroundColor: Color(0xff052659),
+            backgroundColor: kPrimaryColor,
             elevation: 0,
             floating: false,
             pinned: true,
-            expandedHeight: 380.0,
+            expandedHeight: 390,
             leading: IconButton(
                 onPressed: () {},
                 icon: Icon(
@@ -65,7 +66,7 @@ class HomePageWithoutAnnouncment extends StatelessWidget {
                             'Student Name : ',
                             style: TextStyle(
                               fontSize: 20,
-                              color: Color(0xffc1e8ff),
+                              color: kSecondaryColor,
                             ),
                           ),
                           Text(
@@ -86,7 +87,7 @@ class HomePageWithoutAnnouncment extends StatelessWidget {
                             'Class : ',
                             style: TextStyle(
                               fontSize: 20,
-                              color: Color(0xffc1e8ff),
+                              color: kSecondaryColor,
                             ),
                           ),
                           Text(
@@ -107,7 +108,7 @@ class HomePageWithoutAnnouncment extends StatelessWidget {
                             'Division : ',
                             style: TextStyle(
                               fontSize: 20,
-                              color: Color(0xffc1e8ff),
+                              color: kSecondaryColor,
                             ),
                           ),
                           Text(
