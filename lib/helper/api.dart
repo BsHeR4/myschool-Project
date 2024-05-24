@@ -5,14 +5,21 @@ import "package:flutter/widgets.dart";
 import "package:http/http.dart" as http;
 
 class Api {
-  Future<dynamic> get({required String url, @required String? token}) async {
+  Future<dynamic> get({required String url, @required String? token, @required String? accept}) async {
     Map<String, String> headers = {};
 
+   if (accept != null) {
+      headers.addAll({
+        'Accept': accept,
+      });
+    }
+    
     if (token != null) {
       headers.addAll({
         'Authorization': 'Bearer $token',
       });
     }
+ 
     http.Response response = await http.get(
       Uri.parse(url),
       headers: headers,

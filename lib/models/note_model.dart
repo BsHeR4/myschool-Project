@@ -1,25 +1,25 @@
-class NoteModel {
+class StudentNoteModel {
   final int id;
-  final DateTime noteDate;
-  final String noteType;
-  final String noteContent;
-  final String noteCreator;
+  final String creator;
+  final String content;
+  final String dateCreated;
+  // final String noteType;
 
-  NoteModel({
+  StudentNoteModel({
     required this.id,
-    required this.noteDate,
-    required this.noteType,
-    required this.noteContent,
-    required this.noteCreator,
+    required this.creator,
+    required this.content,
+    required this.dateCreated,
+    // required this.noteType,
   });
 
-  factory NoteModel.fromJson(jsonData) {
-    return NoteModel(
-      id: jsonData['id'],
-      noteDate: jsonData['noteDate'],
-      noteType: jsonData['noteType'],
-      noteContent: jsonData['noteContent'],
-      noteCreator: jsonData['noteCreator'],
+  factory StudentNoteModel.fromJson(jsonData) {
+    return StudentNoteModel(
+      id: jsonData['noteId'],
+      content: jsonData['content'],
+      creator: jsonData['creator'],
+      dateCreated: jsonData['Date_Created'],
+      // noteType: jsonData['noteType'],
     );
   }
 }

@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
 class CustomBox extends StatelessWidget {
-  CustomBox({super.key});
+  CustomBox({
+    super.key,
+    required this.content,
+    required this.creator,
+    required this.dateCreated,
+  });
+  String creator;
+  String content;
+  String dateCreated;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -29,20 +37,20 @@ class CustomBox extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text('4/6/2024'),
+                        Text(dateCreated),
                       ],
                     ),
                     SizedBox(
                       height: 15,
                     ),
                     Text(
-                        'His grades are very low, please take care of him and provide good care and monitoring .'),
+                        content),
                     SizedBox(
                       height: 15,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
-                      children: [Text('by teacherName')],
+                      children: [Text('by $creator')],
                     )
                     // growable childrens
                   ],
