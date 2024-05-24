@@ -24,7 +24,7 @@ class HomePageWithoutAnnouncment extends StatelessWidget {
             elevation: 0,
             floating: false,
             pinned: true,
-            expandedHeight: 390,
+            expandedHeight: 370,
             leading: IconButton(
                 onPressed: () {},
                 icon: Icon(
@@ -43,85 +43,91 @@ class HomePageWithoutAnnouncment extends StatelessWidget {
             ],
             flexibleSpace: FlexibleSpaceBar(
               background: Container(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.account_circle,
-                        size: 150,
-                        color: Colors.white,
-                      ),
-                      Text(
-                        'BsherM_2004',
-                        style: TextStyle(fontSize: 25, color: Colors.white),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            'Student Name : ',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: kSecondaryColor,
-                            ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.account_circle,
+                      size: 125,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      'BsherM_2004',
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(
+                          width: 60,
+                        ),
+                        Text(
+                          'Student Name : ',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: kSecondaryColor,
                           ),
-                          Text(
-                            'Bsher Al-Mahayni',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                            ),
+                        ),
+                        Text(
+                          'Bsher Al-Mahayni',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
                           ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            'Class : ',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: kSecondaryColor,
-                            ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(
+                          width: 60,
+                        ),
+                        Text(
+                          'Class : ',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: kSecondaryColor,
                           ),
-                          Text(
-                            ' Secondary Third',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                            ),
+                        ),
+                        Text(
+                          ' Secondary Third',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
                           ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            'Division : ',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: kSecondaryColor,
-                            ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(
+                          width: 60,
+                        ),
+                        Text(
+                          'Division : ',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: kSecondaryColor,
                           ),
-                          Text(
-                            ' First',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                            ),
+                        ),
+                        Text(
+                          ' First',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ),

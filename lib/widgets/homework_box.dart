@@ -23,7 +23,7 @@ class HomeworkBox extends StatelessWidget {
             // constraints: BoxConstraints(
             //     maxHeight: MediaQuery.of(context).size.height * .30),
             child: Card(
-              color: kSecondaryColor4,
+              color: kSecondaryColor,
               child: SingleChildScrollView(
                 child: Padding(
                   padding: const EdgeInsets.all(20),
@@ -55,9 +55,10 @@ class HomeworkBox extends StatelessWidget {
                         height: 15,
                       ),
                       Divider(
+                        color: Colors.black,
                         indent: 75,
                         endIndent: 75,
-                        thickness: 0.7,
+                        thickness: 0.1,
                       ),
 
                       Padding(

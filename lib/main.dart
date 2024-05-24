@@ -60,7 +60,7 @@ class _MySchoolState extends State<MySchool> {
           ShowMarkPage.id: (context) => ShowMarkPage(),
           ShowHomeworkPage.id:(context) => ShowHomeworkPage(),
         },
-        initialRoute: MainPage.id,
+        initialRoute: LoginPage.id,
       ),
     );
   }
