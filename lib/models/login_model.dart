@@ -1,7 +1,9 @@
 class LoginModel {
   final String token;
 
-  LoginModel({required this.token});
+  LoginModel({
+    required this.token,
+  });
 
   factory LoginModel.formJson(data) {
     return LoginModel(

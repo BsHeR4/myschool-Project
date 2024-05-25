@@ -8,9 +8,15 @@ class LoginService {
     String url =
         '$baseUrl/api/loginStudent?username=$userName&password=$password';
 
-    Map<String, dynamic> data = await Api().post(
-      url: url,
-    );
-    return LoginModel.formJson(data);
+  Map<String, dynamic> data = await Api().post(
+    url: url,
+  );
+  return LoginModel.formJson(data);
+
+
+  
+ 
+
+    
   }
 }

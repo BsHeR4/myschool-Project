@@ -28,10 +28,12 @@ class MySchool extends StatefulWidget {
 class _MySchoolState extends State<MySchool> {
   @override
   Widget build(BuildContext context) {
-    return Provider(
-      create: (context) {
-        return LoginProvider();
-      },
+    return MultiProvider(
+      providers: [
+        Provider(create: (context) {
+          return LoginProvider();
+        }),
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
@@ -58,7 +60,7 @@ class _MySchoolState extends State<MySchool> {
           MarkPage.id: (context) => MarkPage(),
           NotePage.id: (context) => NotePage(),
           ShowMarkPage.id: (context) => ShowMarkPage(),
-          ShowHomeworkPage.id:(context) => ShowHomeworkPage(),
+          ShowHomeworkPage.id: (context) => ShowHomeworkPage(),
         },
         initialRoute: LoginPage.id,
       ),

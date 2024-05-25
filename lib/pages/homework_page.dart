@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:myschool/widgets/drawer_nav.dart';
 import 'package:myschool/widgets/homework_box.dart';
 import 'package:myschool/widgets/homework_button.dart';
 import 'package:myschool/widgets/subject_mark_box.dart';
@@ -11,19 +12,22 @@ class HomeworkPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          leading: Builder(
+            builder: (context) => IconButton(
+              icon: Icon(
+                Icons.menu,
+                color: Colors.white,
+                size: 40,
+              ),
+              onPressed: () => Scaffold.of(context).openDrawer(),
+            ),
+          ),
           backgroundColor: Color(0xff052659),
           title: Text(
             'Homeworks',
             style: TextStyle(color: Colors.white),
           ),
           centerTitle: true,
-          leading: IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.menu_outlined,
-                size: 40,
-                color: Colors.white,
-              )),
           actions: [
             IconButton(
                 onPressed: () {},
@@ -34,6 +38,7 @@ class HomeworkPage extends StatelessWidget {
                 )),
           ],
         ),
+        drawer: DrawerNav(),
         body: Column(
           children: [
             HomeworkButton(

@@ -67,7 +67,7 @@ class HomeworkBox extends StatelessWidget {
                           right: 50,
                         ),
                         child: cutsomButton(
-                          text: 'Show Details',
+                          text: 'Download PDF',
                           textColor: Colors.white,
                           buttonColor: kPrimaryColor,
                         ),

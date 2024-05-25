@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myschool/widgets/custom_box.dart';
+import 'package:myschool/widgets/drawer_nav.dart';
 import 'package:myschool/widgets/subject_mark_box.dart';
 import 'package:myschool/widgets/subject_mark_button.dart';
 
@@ -10,20 +11,24 @@ class MarkPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: DrawerNav(),
       appBar: AppBar(
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: Icon(
+              Icons.menu,
+              color: Colors.white,
+              size: 40,
+            ),
+            onPressed: () => Scaffold.of(context).openDrawer(),
+          ),
+        ),
         backgroundColor: Color(0xff052659),
         title: Text(
           'Marks',
           style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
-        leading: IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.menu_outlined,
-              size: 40,
-              color: Colors.white,
-            )),
         actions: [
           IconButton(
               onPressed: () {},
