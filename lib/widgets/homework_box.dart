@@ -4,8 +4,14 @@ import 'package:myschool/constants.dart';
 import 'package:myschool/widgets/custom_button.dart';
 
 class HomeworkBox extends StatelessWidget {
-  const HomeworkBox({super.key});
-
+  HomeworkBox({
+    super.key,
+    required this.creator,
+    required this.subjectName,
+    required this.startDate,
+    required this.endDate,
+  });
+  String creator, subjectName, startDate, endDate;
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
@@ -34,22 +40,18 @@ class HomeworkBox extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text('4/4/2024'),
+                          Text(startDate),
                         ],
                       ),
-                      Text('Teacher Name :  Bsher Al-mahayni'),
+                      Text('Teacher Name :  $creator'),
                       SizedBox(
                         height: 15,
                       ),
-                      Text('Subject : Mathematic'),
+                      Text('Subject : $subjectName'),
                       SizedBox(
                         height: 15,
                       ),
-                      Text('Mark : 20'),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Text('End Date : 10/4/2024'),
+                      Text('End Date : $endDate'),
                       // growable childrens
                       SizedBox(
                         height: 15,
@@ -66,7 +68,7 @@ class HomeworkBox extends StatelessWidget {
                           left: 50,
                           right: 50,
                         ),
-                        child: cutsomButton(
+                        child: CutsomButton(
                           text: 'Download PDF',
                           textColor: Colors.white,
                           buttonColor: kPrimaryColor,

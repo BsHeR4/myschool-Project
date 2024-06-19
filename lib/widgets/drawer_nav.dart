@@ -1,12 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myschool/constants.dart';
-import 'package:myschool/helper/api.dart';
 import 'package:myschool/helper/show_snack_bar.dart';
 import 'package:myschool/models/login_model.dart';
 import 'package:myschool/models/student_profile_model.dart';
 import 'package:myschool/pages/login_page.dart';
-import 'package:myschool/pages/main_page.dart';
+import 'package:myschool/pages/weekly_schedule_page.dart';
 import 'package:myschool/providers/login_provider.dart';
 import 'package:myschool/services/logout_service.dart';
 import 'package:myschool/services/student_profile_service.dart';
@@ -21,7 +20,7 @@ class DrawerNav extends StatelessWidget {
         Provider.of<LoginProvider>(context, listen: false).loginData;
     return FutureBuilder<StudentProfileModel>(
         future: StudentProfileService().StudentProfile(
-            token: loginData!.token!, accept: 'application/json'),
+            token: loginData!.token, accept: 'application/json'),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(
@@ -44,6 +43,13 @@ class DrawerNav extends StatelessWidget {
                       size: 65,
                     ),
                     decoration: BoxDecoration(color: kPrimaryColor),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.calendar_today_rounded),
+                    title: Text('Weekly schedule'),
+                    onTap: () {
+                      Navigator.pushNamed(context, WeeklySchedule.id);
+                    },
                   ),
                   ListTile(
                     leading: Icon(Icons.logout_outlined),

@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class cutsomButton extends StatelessWidget {
-  cutsomButton({this.onTap, required this.text, required this.buttonColor, required this.textColor});
+class CutsomButton extends StatelessWidget {
+  CutsomButton(
+      {this.onTap,
+      required this.text,
+      required this.buttonColor,
+      required this.textColor});
   String text;
   Color buttonColor;
   Color textColor;

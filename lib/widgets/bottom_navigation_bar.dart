@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:myschool/pages/home_page_without_announcment.dart';
-import 'package:myschool/pages/login_page.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
   CustomBottomNavigationBar({super.key});

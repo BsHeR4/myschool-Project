@@ -7,6 +7,7 @@ import 'package:myschool/pages/mark_page.dart';
 import 'package:myschool/pages/note_page.dart';
 import 'package:myschool/pages/show_homework_page.dart';
 import 'package:myschool/pages/show_mark_page.dart';
+import 'package:myschool/pages/weekly_schedule_page.dart';
 import 'package:myschool/providers/login_provider.dart';
 import 'package:myschool/widgets/bottom_navigation_bar.dart';
 import 'package:provider/provider.dart';
@@ -61,6 +62,7 @@ class _MySchoolState extends State<MySchool> {
           NotePage.id: (context) => NotePage(),
           ShowMarkPage.id: (context) => ShowMarkPage(),
           ShowHomeworkPage.id: (context) => ShowHomeworkPage(),
+          WeeklySchedule.id :(context) =>  WeeklySchedule(),
         },
         initialRoute: LoginPage.id,
       ),

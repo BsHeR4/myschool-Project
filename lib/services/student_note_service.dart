@@ -1,7 +1,6 @@
 import 'package:myschool/constants.dart';
 import 'package:myschool/helper/api.dart';
 import 'package:myschool/models/note_model.dart';
-import 'package:myschool/models/student_profile_model.dart';
 
 class StudentNoteService {
   Future<List<StudentNoteModel>> StudentNote(

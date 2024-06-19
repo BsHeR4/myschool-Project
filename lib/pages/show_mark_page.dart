@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myschool/widgets/mark_box.dart';
-import 'package:myschool/widgets/subject_mark_box.dart';
 
 class ShowMarkPage extends StatelessWidget {
   const ShowMarkPage({super.key});

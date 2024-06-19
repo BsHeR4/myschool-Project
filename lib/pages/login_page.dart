@@ -4,16 +4,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:myschool/constants.dart';
 import 'package:myschool/helper/show_snack_bar.dart';
-import 'package:myschool/models/login_model.dart';
 import 'package:myschool/pages/main_page.dart';
 import 'package:myschool/widgets/custom_button.dart';
 import 'package:myschool/widgets/custom_text_field.dart';
 import 'package:myschool/widgets/default_login_sliver_app_bar.dart';
 import 'package:myschool/widgets/max_scroling_login_sliver_app_bar.dart';
-import 'package:myschool/pages/home_page_without_announcment.dart';
 import 'package:myschool/providers/login_provider.dart';
 import 'package:myschool/services/login_service.dart';
 import 'package:provider/provider.dart';
@@ -137,7 +134,7 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(
                           height: 50,
                         ),
-                        cutsomButton(
+                        CutsomButton(
                           text: 'Sign in',
                           buttonColor: kPrimaryColor,
                           textColor: Colors.white,
@@ -173,6 +170,7 @@ class _LoginPageState extends State<LoginPage> {
                                       color: kPrimaryColor,
                                     ));
                               } on Exception catch (e) {
+                                print(e);
                                 showSnackBar(
                                     context,
                                     'There is an Error',

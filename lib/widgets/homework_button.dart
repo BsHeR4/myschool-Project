@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myschool/constants.dart';
 import 'package:myschool/pages/show_homework_page.dart';
-import 'package:myschool/pages/show_mark_page.dart';
 
 class HomeworkButton extends StatelessWidget {
   HomeworkButton({super.key, required this.text, required this.image});

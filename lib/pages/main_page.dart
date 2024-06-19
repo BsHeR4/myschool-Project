@@ -5,7 +5,6 @@ import 'package:myschool/pages/home_page_without_announcment.dart';
 import 'package:myschool/pages/homework_page.dart';
 import 'package:myschool/pages/mark_page.dart';
 import 'package:myschool/pages/note_page.dart';
-import 'package:myschool/widgets/drawer_nav.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

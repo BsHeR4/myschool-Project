@@ -53,8 +53,8 @@ class _NotePageState extends State<NotePage> {
           ],
         ),
         body: FutureBuilder<List<StudentNoteModel>>(
-            future: StudentNoteService().StudentNote(
-              token: loginData!.token!,
+            future: StudentNoteService().StudentNote( 
+              token: loginData!.token,
               accept: 'application/json',
             ),
             builder: ((context, snapshot) {

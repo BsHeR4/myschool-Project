@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:myschool/widgets/custom_box.dart';
 import 'package:myschool/widgets/drawer_nav.dart';
 import 'package:myschool/widgets/subject_mark_box.dart';
-import 'package:myschool/widgets/subject_mark_button.dart';
 
 class MarkPage extends StatelessWidget {
   const MarkPage({super.key});

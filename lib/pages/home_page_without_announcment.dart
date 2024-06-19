@@ -4,7 +4,6 @@ import 'package:flutter/widgets.dart';
 import 'package:myschool/constants.dart';
 import 'package:myschool/models/student_profile_model.dart';
 import 'package:myschool/services/student_profile_service.dart';
-import 'package:myschool/widgets/bottom_navigation_bar.dart';
 import 'package:myschool/models/login_model.dart';
 import 'package:myschool/providers/login_provider.dart';
 import 'package:myschool/widgets/drawer_nav.dart';
@@ -21,7 +20,7 @@ class HomePageWithoutAnnouncment extends StatelessWidget {
 
     return FutureBuilder<StudentProfileModel>(
         future: StudentProfileService().StudentProfile(
-            token: loginData!.token!, accept: 'application/json'),
+            token: loginData!.token, accept: 'application/json'),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(

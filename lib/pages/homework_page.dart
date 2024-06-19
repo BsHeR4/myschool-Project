@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myschool/widgets/drawer_nav.dart';
-import 'package:myschool/widgets/homework_box.dart';
 import 'package:myschool/widgets/homework_button.dart';
-import 'package:myschool/widgets/subject_mark_box.dart';
 
 class HomeworkPage extends StatelessWidget {
   const HomeworkPage({super.key});

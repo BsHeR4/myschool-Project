@@ -1,30 +1,28 @@
-import 'dart:io';
-
-class HomeworkModel {
-  final File file; // I should search for this type and know if it work or not
-  final String homeworkName;
-  final DateTime startDate;
-  final DateTime endDate;
+class StudentHomeworkModel {
+  // final File file; // I should search for this type and know if it work or not
+  final String creator;
   final String subjectName;
-  final String teacherName;
+  final String startDate;
+  final String endDate;
+  // final String homeworkName;
 
-  HomeworkModel({
-    required this.file,
-    required this.homeworkName,
+  StudentHomeworkModel({
+    // required this.file,
+    required this.creator,
+    required this.subjectName,
     required this.startDate,
     required this.endDate,
-    required this.subjectName,
-    required this.teacherName,
+    // required this.homeworkName,
   });
 
-  factory HomeworkModel.fromJson(jsonData) {
-    return HomeworkModel(
-      file: jsonData['file'],
-      homeworkName: jsonData['homeworkName'],
-      startDate: jsonData['startDate'],
-      endDate: jsonData['endDate'],
-      subjectName: jsonData['subjectName'],
-      teacherName: jsonData['teacherName'],
+  factory StudentHomeworkModel.fromJson(jsonData) {
+    return StudentHomeworkModel(
+      // file: jsonData['file'],
+      creator: jsonData['creator'],
+      subjectName: jsonData['subject'],
+      startDate: jsonData['startHomework'],
+      endDate: jsonData['endHomework'],
+      // homeworkName: jsonData['homeworkName'],
     );
   }
 }
