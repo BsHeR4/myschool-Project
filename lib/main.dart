@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myschool/pages/home_page_without_announcment.dart';
+import 'package:myschool/pages/home_page.dart';
 import 'package:myschool/pages/homework_page.dart';
 import 'package:myschool/pages/login_page.dart';
 import 'package:myschool/pages/main_page.dart';
@@ -52,8 +52,7 @@ class _MySchoolState extends State<MySchool> {
       */
         routes: {
           LoginPage.id: (context) => LoginPage(),
-          HomePageWithoutAnnouncment.id: (context) =>
-              HomePageWithoutAnnouncment(),
+          HomePage.id: (context) => HomePage(),
           CustomBottomNavigationBar.id: (context) =>
               CustomBottomNavigationBar(),
           MainPage.id: (context) => MainPage(),
@@ -62,7 +61,7 @@ class _MySchoolState extends State<MySchool> {
           NotePage.id: (context) => NotePage(),
           ShowMarkPage.id: (context) => ShowMarkPage(),
           ShowHomeworkPage.id: (context) => ShowHomeworkPage(),
-          WeeklySchedule.id :(context) =>  WeeklySchedule(),
+          WeeklySchedule.id: (context) => WeeklySchedule(),
         },
         initialRoute: LoginPage.id,
       ),

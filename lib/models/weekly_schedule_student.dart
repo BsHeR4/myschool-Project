@@ -1,5 +1,5 @@
 class WeeklyScheduleStudentModel {
-  final String WeeklyScheduleUrl;
+   String WeeklyScheduleUrl = '';
 
   WeeklyScheduleStudentModel({required this.WeeklyScheduleUrl});
 

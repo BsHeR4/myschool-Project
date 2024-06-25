@@ -5,14 +5,18 @@ import 'package:myschool/models/note_model.dart';
 class StudentNoteService {
   Future<List<StudentNoteModel>> StudentNote(
       {required String token, required String accept}) async {
-    String url = '$baseUrl/api/nodeSudent';
-    final Map<String, dynamic> data =
-        await Api().get(url: url, token: token, accept: accept);
-
-    List noteData = data['data'];
     List<StudentNoteModel> noteList = [];
-    for (var i = 0; i < noteData.length; i++) {
-      noteList.add(StudentNoteModel.fromJson(noteData[i]));
+    String url = '$baseUrl/api/nodeStudent';
+    try {
+      final Map<String, dynamic> data =
+          await Api().get(url: url, token: token, accept: accept);
+
+      List noteData = data['data'];
+      for (var i = 0; i < noteData.length; i++) {
+        noteList.add(StudentNoteModel.fromJson(noteData[i]));
+      }
+    } on Exception catch (e) {
+      print(e);
     }
     return noteList;
   }

@@ -5,18 +5,17 @@ import 'package:myschool/models/login_model.dart';
 class LoginService {
   Future<LoginModel> Login(
       {required String userName, required String password}) async {
-    String url =
-        '$baseUrl/api/loginStudent?username=$userName&password=$password';
+    Map<String, dynamic>? data;
+    try {
+      String url =
+          '$baseUrl/api/loginStudent?username=$userName&password=$password';
 
-  Map<String, dynamic> data = await Api().post(
-    url: url,
-  );
-  return LoginModel.formJson(data);
-
-
-  
- 
-
-    
+      data = await Api().post(
+        url: url,
+      );
+    } on Exception catch (e) {
+      print(e);
+    }
+    return LoginModel.formJson(data);
   }
 }

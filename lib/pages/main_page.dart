@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:myschool/pages/home_page_without_announcment.dart';
+import 'package:myschool/pages/home_page.dart';
 import 'package:myschool/pages/homework_page.dart';
 import 'package:myschool/pages/mark_page.dart';
 import 'package:myschool/pages/note_page.dart';
@@ -16,7 +16,7 @@ class MainPage extends StatefulWidget {
 class _MyWidgetState extends State<MainPage> {
   int myindex = 0;
   List<Widget> widgetsList = [
-    HomePageWithoutAnnouncment(),
+    HomePage(),
     MarkPage(),
     HomeworkPage(),
     NotePage(),

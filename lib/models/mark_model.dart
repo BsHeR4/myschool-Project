@@ -1,28 +1,28 @@
 class MarkModel {
-  final int id;
-  final String studentName;
   final String teacherName;
-  final String subjectName;
-  final int subjectMark;
+  final int maxSubjectMark;
+  final int minSubjectMark;
+  final int maxMark;
+  final int mark;
   final String type;
 
   MarkModel({
-    required this.id,
-    required this.subjectName,
-    required this.subjectMark,
-    required this.type,
-    required this.studentName,
     required this.teacherName,
+    required this.maxSubjectMark,
+    required this.minSubjectMark,
+    required this.maxMark,
+    required this.mark,
+    required this.type,
   });
 
   factory MarkModel.fromJson(jsonData) {
     return MarkModel(
-      id: jsonData['id'],
-      subjectName: jsonData['subjectName'],
-      subjectMark: jsonData['subjectMark'],
-      type: jsonData['type'],
-      studentName: jsonData['studentName'],
-      teacherName: jsonData['teacherName'],
+      teacherName: jsonData['teacher'],
+      maxSubjectMark: jsonData['max'],
+      minSubjectMark: jsonData['min'],
+      maxMark: jsonData['mx'],
+      mark: jsonData['mark'],
+      type: jsonData['name'],
     );
   }
 }

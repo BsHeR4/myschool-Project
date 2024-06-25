@@ -4,13 +4,14 @@ import 'package:myschool/constants.dart';
 import 'package:myschool/pages/show_mark_page.dart';
 
 class SubjectMarkBox extends StatelessWidget {
-  const SubjectMarkBox({super.key});
-
+  SubjectMarkBox({super.key, required this.subjectName, required this.subjectId});
+  String subjectName;
+  int subjectId;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, ShowMarkPage.id);
+        Navigator.pushNamed(context, ShowMarkPage.id,arguments: [subjectId, subjectName]);
       },
       child: Stack(children: [
         Center(
@@ -46,7 +47,7 @@ class SubjectMarkBox extends StatelessWidget {
                               width: 10,
                             ),
                             Text(
-                              'Mathematic',
+                              subjectName,
                               style: TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.w500),
                             ),

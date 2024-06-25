@@ -30,7 +30,7 @@ class _WeeklyScheduleState extends State<WeeklySchedule> {
         ),
         centerTitle: true,
       ),
-      body: FutureBuilder<WeeklyScheduleStudentModel>(
+      body: FutureBuilder<WeeklyScheduleStudentModel?>(
         future: WeeklyScheduleStudentService().WeeklyScheduleStudent(
             token: loginData!.token, accept: 'application/json'),
         builder: ((context, snapshot) {
@@ -43,7 +43,7 @@ class _WeeklyScheduleState extends State<WeeklySchedule> {
           } else {
             WeeklyScheduleStudentModel weeklySchedule = snapshot.data!;
             print(weeklySchedule.WeeklyScheduleUrl);
-            if (weeklySchedule.WeeklyScheduleUrl.isNotEmpty) {
+            if (weeklySchedule.WeeklyScheduleUrl == '') {
               return RefreshIndicator(
                 child: Center(
                   child: Image.network(
@@ -69,7 +69,7 @@ class _WeeklyScheduleState extends State<WeeklySchedule> {
                       Column(
                         children: [
                           Image.asset(
-                            'assets/images/noNote.png',
+                            'assets/images/noSchedule.png',
                           ),
                           Text(
                             'There is no Schedule found',

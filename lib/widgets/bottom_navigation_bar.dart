@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myschool/pages/home_page_without_announcment.dart';
+import 'package:myschool/pages/home_page.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
   CustomBottomNavigationBar({super.key});
@@ -13,7 +13,7 @@ class CustomBottomNavigationBar extends StatefulWidget {
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   int myindex = 0;
   List<String> widgetList = [
-    HomePageWithoutAnnouncment.id,
+    HomePage.id,
   ];
   @override
   Widget build(BuildContext context) {

@@ -4,8 +4,16 @@ import 'package:flutter/widgets.dart';
 import 'package:myschool/constants.dart';
 
 class MarkBox extends StatelessWidget {
-  const MarkBox({super.key});
-
+  MarkBox(
+      {super.key,
+      required this.teacherName,
+      required this.mark,
+      required this.max,
+      required this.Name});
+  String teacherName;
+  int mark;
+  int max;
+  String Name;
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
@@ -37,23 +45,20 @@ class MarkBox extends StatelessWidget {
                           Text('4/4/2024'),
                         ],
                       ),
-                      Text('Teacher Name :  Bsher Al-mahayni'),
+                      Text('Teacher Name :  $teacherName'),
                       SizedBox(
                         height: 15,
                       ),
-                      Text('Student mark :  500'),
+                      Text('Student mark :  $mark'),
                       SizedBox(
                         height: 15,
                       ),
-                      Text('Maximum :  600'),
+                      Text('Maximum :  $max'),
                       SizedBox(
                         height: 15,
                       ),
-                      Text('Minimum :  300'),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Text('Test type :  Final'),
+
+                      Text('Type :  $Name'),
                       SizedBox(
                         height: 15,
                       ),
@@ -70,10 +75,10 @@ class MarkBox extends StatelessWidget {
       ),
       Positioned(
         right: 10,
-        bottom: 30,
+        bottom: 26,
         child: Container(
-          height: 200,
-          width: 250,
+          height: 180,
+          width: 230,
           child: Image.asset('assets/images/Smiley_face.png'),
         ),
       )
