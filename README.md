@@ -1,16 +1,19 @@
 # myschool
 
-A new Flutter project.
+A Flutter project for school system.
 
-## Getting Started
+## Description
+This project is a **School App For Parents** built with **Flutter**. It allows users to perform **Show announcement, Marks, Homeworks, Weekly schedule and notes**.
 
-This project is a starting point for a Flutter application.
+### Key Features:
+- **MVC + S**: Divide the project using MVC + S to make it easy for maintenance and edit.
+- **Home**: Show announcement related with school and some information about the student.
+- **Marks**: Allows users to show their marks which is filtered by subjects.
+- **Homeworks**: Ability to see the Homeworks that need to be completed in addition to sorting the completed Homeworks.
+- **Notes**: Ability to see notes made by teachers or mentors.
+- **Weekly schedule**: Ability to see the weekly schedule within an image.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Technologies Used:
+- **Flutter**.
+- **Dart**.
+- **Postman Collection**: Contains all API requests for easy testing and interaction with the API.
