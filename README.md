@@ -16,4 +16,3 @@ This project is a **School App For Parents** built with **Flutter**. It allows u
 ### Technologies Used:
 - **Flutter**.
 - **Dart**.
-- **Postman Collection**: Contains all API requests for easy testing and interaction with the API.
